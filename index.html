@@ -1,0 +1,1019 @@
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MOTIF Café & Restaurant</title>
+
+    <style>
+
+        :root {
+            --bg-color: #f6f1e8;
+            --card-bg: #fffdf8;
+            --text-color: #29251f;
+            --accent-color: #9b6b3d;
+            --accent-dark: #704725;
+            --border-color: #ded4c5;
+            --muted-color: #81796e;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(155, 107, 61, 0.08),
+                    transparent 35%
+                ),
+                var(--bg-color);
+
+            color: var(--text-color);
+
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            line-height: 1.7;
+
+            transition: 0.2s ease;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            text-align: center;
+            padding: 40px 20px 25px;
+        }
+
+
+        .logo {
+            width: 130px;
+            height: 130px;
+
+            object-fit: contain;
+
+            margin-bottom: 12px;
+
+            filter:
+                drop-shadow(
+                    0 4px 8px rgba(0, 0, 0, 0.08)
+                );
+        }
+
+
+        h1 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 2.3rem;
+
+            letter-spacing: 6px;
+
+            margin: 0;
+
+            font-weight: 600;
+
+            color: var(--text-color);
+
+            direction: ltr;
+        }
+
+
+        .subtitle {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 0.8rem;
+
+            color: var(--accent-color);
+
+            margin-top: 4px;
+
+            letter-spacing: 3px;
+
+            direction: ltr;
+        }
+
+
+        header::after {
+            content: "";
+
+            display: block;
+
+            width: 55px;
+            height: 2px;
+
+            background:
+                var(--accent-color);
+
+            margin:
+                20px auto 0;
+        }
+
+
+        /* ================= LANGUAGE SWITCH ================= */
+
+        .language-switch {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 5px;
+
+            margin:
+                0 auto 25px;
+
+            direction: ltr;
+        }
+
+
+        .language-switch button {
+
+            border:
+                1px solid
+                var(--border-color);
+
+            background:
+                var(--card-bg);
+
+            color:
+                var(--accent-dark);
+
+            padding:
+                6px 13px;
+
+            border-radius:
+                20px;
+
+            cursor:
+                pointer;
+
+            font-family:
+                Arial,
+                Tahoma,
+                sans-serif;
+
+            font-size:
+                0.75rem;
+
+            transition:
+                all 0.2s ease;
+        }
+
+
+        .language-switch button:hover {
+
+            background:
+                #f2e7d8;
+        }
+
+
+        .language-switch button.active {
+
+            background:
+                var(--accent-color);
+
+            color:
+                white;
+
+            border-color:
+                var(--accent-color);
+        }
+
+
+        /* ================= CONTAINER ================= */
+
+        .container {
+
+            max-width:
+                650px;
+
+            margin:
+                0 auto;
+
+            padding:
+                0 18px 60px;
+        }
+
+
+        /* ================= CATEGORY ================= */
+
+        .category-section {
+
+            margin-top:
+                35px;
+        }
+
+
+        .category-header {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            padding:
+                13px 16px;
+
+            margin-bottom:
+                12px;
+
+            background:
+                rgba(
+                    255,
+                    253,
+                    248,
+                    0.8
+                );
+
+            border:
+                1px solid
+                var(--border-color);
+
+            border-radius:
+                12px;
+
+            box-shadow:
+                0 3px 12px
+                rgba(
+                    70,
+                    50,
+                    30,
+                    0.05
+                );
+        }
+
+
+        .category-header h2 {
+
+            font-size:
+                1.15rem;
+
+            margin:
+                0;
+
+            color:
+                var(--accent-dark);
+
+            font-weight:
+                600;
+        }
+
+
+        .category-icon {
+
+            width:
+                25px;
+
+            height:
+                25px;
+
+            fill:
+                var(--accent-color);
+
+            flex-shrink:
+                0;
+        }
+
+
+        /* ================= MENU ITEMS ================= */
+
+        .menu-item {
+
+            background:
+                var(--card-bg);
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            padding:
+                17px 18px;
+
+            margin-bottom:
+                9px;
+
+            border:
+                1px solid
+                #e9e0d3;
+
+            border-radius:
+                11px;
+
+            box-shadow:
+                0 3px 10px
+                rgba(
+                    70,
+                    50,
+                    30,
+                    0.035
+                );
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .menu-item:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                #ccb89f;
+
+            box-shadow:
+                0 7px 18px
+                rgba(
+                    70,
+                    50,
+                    30,
+                    0.08
+                );
+        }
+
+
+        .item-info {
+
+            min-width:
+                0;
+        }
+
+
+        .item-info h3 {
+
+            margin:
+                0;
+
+            font-size:
+                1.05rem;
+
+            font-weight:
+                600;
+
+            color:
+                var(--text-color);
+        }
+
+
+        .item-info p {
+
+            margin:
+                4px 0 0;
+
+            font-size:
+                0.82rem;
+
+            color:
+                var(--muted-color);
+        }
+
+
+        /* ================= PRICE ================= */
+
+        .item-price {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-weight:
+                bold;
+
+            font-size:
+                0.95rem;
+
+            color:
+                var(--accent-dark);
+
+            white-space:
+                nowrap;
+
+            margin-right:
+                15px;
+
+            background:
+                #f2e7d8;
+
+            padding:
+                6px 10px;
+
+            border-radius:
+                8px;
+
+            direction:
+                ltr;
+
+            unicode-bidi:
+                embed;
+        }
+
+
+        /* ================= ENGLISH MODE ================= */
+
+        body.english {
+
+            direction:
+                ltr;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        body.english
+        .category-header {
+
+            flex-direction:
+                row;
+        }
+
+
+        body.english
+        .item-info {
+
+            text-align:
+                left;
+        }
+
+
+        body.english
+        .item-price {
+
+            margin-right:
+                0;
+
+            margin-left:
+                15px;
+
+            direction:
+                ltr;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            text-align:
+                center;
+
+            padding:
+                35px 20px 45px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                0.75rem;
+
+            color:
+                #9a9185;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 480px) {
+
+            header {
+
+                padding:
+                    30px 15px 20px;
+            }
+
+
+            .logo {
+
+                width:
+                    105px;
+
+                height:
+                    105px;
+            }
+
+
+            h1 {
+
+                font-size:
+                    2rem;
+
+                letter-spacing:
+                    5px;
+            }
+
+
+            .subtitle {
+
+                font-size:
+                    0.72rem;
+
+                letter-spacing:
+                    2px;
+            }
+
+
+            .container {
+
+                padding:
+                    0 13px 45px;
+            }
+
+
+            .category-section {
+
+                margin-top:
+                    27px;
+            }
+
+
+            .category-header {
+
+                padding:
+                    12px 14px;
+            }
+
+
+            .category-header h2 {
+
+                font-size:
+                    1.05rem;
+            }
+
+
+            .menu-item {
+
+                padding:
+                    15px 14px;
+            }
+
+
+            .item-info h3 {
+
+                font-size:
+                    0.98rem;
+            }
+
+
+            .item-info p {
+
+                font-size:
+                    0.77rem;
+            }
+
+
+            .item-price {
+
+                font-size:
+                    0.85rem;
+
+                padding:
+                    5px 8px;
+
+                margin-right:
+                    10px;
+            }
+        }
+
+
+        .menu-item:active {
+
+            transform:
+                scale(0.985);
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <img
+            src="MOTIF_logo_transparent.png"
+            alt="Motif Logo"
+            class="logo"
+        >
+
+        <h1>MOTIF</h1>
+
+        <div class="subtitle">
+            CAFÉ & RESTAURANT
+        </div>
+
+    </header>
+
+
+    <!-- ================= LANGUAGE SWITCH ================= -->
+
+    <div class="language-switch">
+
+        <button
+            id="faButton"
+            class="active"
+            onclick="setLanguage('fa')"
+        >
+            فارسی
+        </button>
+
+
+        <button
+            id="enButton"
+            onclick="setLanguage('en')"
+        >
+            EN
+        </button>
+
+    </div>
+
+
+    <!-- ================= MENU ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= HOT DRINKS ================= -->
+
+        <section class="category-section">
+
+            <div class="category-header">
+
+                <svg
+                    class="category-icon"
+                    viewBox="0 0 24 24"
+                >
+
+                    <path d="M2,21H22V19H2M20,8H18V5H20V2H4V5H6V8H4V10H20V8M18,12H6V18H18V12Z" />
+
+                </svg>
+
+
+                <h2
+                    data-fa="نوشیدنی‌های گرم"
+                    data-en="Hot Drinks"
+                >
+                    نوشیدنی‌های گرم
+                </h2>
+
+            </div>
+
+
+            <!-- ESPRESSO -->
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3
+                        data-fa="اسپرسو"
+                        data-en="Espresso"
+                    >
+                        اسپرسو
+                    </h3>
+
+
+                    <p
+                        data-fa="عصاره غلیظ و اصیل قهوه"
+                        data-en="Rich and authentic coffee espresso"
+                    >
+                        عصاره غلیظ و اصیل قهوه
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="item-price"
+                    data-fa="۴۵,۰۰۰"
+                    data-en="45,000"
+                >
+                    ۴۵,۰۰۰
+                </div>
+
+            </div>
+
+
+            <!-- CAPPUCCINO -->
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3
+                        data-fa="کاپوچینو"
+                        data-en="Cappuccino"
+                    >
+                        کاپوچینو
+                    </h3>
+
+
+                    <p
+                        data-fa="اسپرسو، شیر بخار داده شده و فوم شیر"
+                        data-en="Espresso, steamed milk and silky milk foam"
+                    >
+                        اسپرسو، شیر بخار داده شده و فوم شیر
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="item-price"
+                    data-fa="۶۵,۰۰۰"
+                    data-en="65,000"
+                >
+                    ۶۵,۰۰۰
+                </div>
+
+            </div>
+
+
+            <!-- LATTE -->
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3
+                        data-fa="لاته"
+                        data-en="Latte"
+                    >
+                        لاته
+                    </h3>
+
+
+                    <p
+                        data-fa="اسپرسو و شیر با فوم لطیف"
+                        data-en="Espresso with smooth steamed milk foam"
+                    >
+                        اسپرسو و شیر با فوم لطیف
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="item-price"
+                    data-fa="۷۰,۰۰۰"
+                    data-en="70,000"
+                >
+                    ۷۰,۰۰۰
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LIGHT FOOD ================= -->
+
+        <section class="category-section">
+
+            <div class="category-header">
+
+                <svg
+                    class="category-icon"
+                    viewBox="0 0 24 24"
+                >
+
+                    <path d="M17,8C8,10 5,16 5,16C5,16 7,14 10,14C12,14 15,14 17,13C21,11 22,5 22,5C22,5 18,5 15,8C13,10 11,12 10,14C9,15 7,15 5,16C5,16 4,18 4,20C4,20 6,19 8,18C10,17 13,15 15,14C17,13 20,11 21,8C22,5 17,4 17,8Z" />
+
+                </svg>
+
+
+                <h2
+                    data-fa="غذاهای سبک و سبزیجات"
+                    data-en="Light Meals & Vegetables"
+                >
+                    غذاهای سبک و سبزیجات
+                </h2>
+
+            </div>
+
+
+            <!-- SALAD -->
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3
+                        data-fa="سالاد فصل موتیف"
+                        data-en="Motif Seasonal Salad"
+                    >
+                        سالاد فصل موتیف
+                    </h3>
+
+
+                    <p
+                        data-fa="ترکیب سبزیجات تازه و سس مخصوص"
+                        data-en="Fresh seasonal vegetables with our signature dressing"
+                    >
+                        ترکیب سبزیجات تازه و سس مخصوص
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="item-price"
+                    data-fa="۸۵,۰۰۰"
+                    data-en="85,000"
+                >
+                    ۸۵,۰۰۰
+                </div>
+
+            </div>
+
+
+            <!-- VEGETARIAN SANDWICH -->
+
+            <div class="menu-item">
+
+                <div class="item-info">
+
+                    <h3
+                        data-fa="ساندویچ گیاهی"
+                        data-en="Vegetarian Sandwich"
+                    >
+                        ساندویچ گیاهی
+                    </h3>
+
+
+                    <p
+                        data-fa="پنیر مخصوص و سبزیجات فصل"
+                        data-en="Special cheese with fresh seasonal vegetables"
+                    >
+                        پنیر مخصوص و سبزیجات فصل
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="item-price"
+                    data-fa="۹۵,۰۰۰"
+                    data-en="95,000"
+                >
+                    ۹۵,۰۰۰
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 MOTIF Café & Restaurant
+
+    </footer>
+
+
+    <!-- ================= LANGUAGE SCRIPT ================= -->
+
+    <script>
+
+        function setLanguage(language) {
+
+            const elements =
+                document.querySelectorAll(
+                    "[data-fa][data-en]"
+                );
+
+
+            elements.forEach(function (element) {
+
+                if (language === "en") {
+
+                    element.textContent =
+                        element.getAttribute("data-en");
+
+                } else {
+
+                    element.textContent =
+                        element.getAttribute("data-fa");
+
+                }
+
+            });
+
+
+            const body =
+                document.body;
+
+            const faButton =
+                document.getElementById(
+                    "faButton"
+                );
+
+            const enButton =
+                document.getElementById(
+                    "enButton"
+                );
+
+
+            if (language === "en") {
+
+                body.classList.add(
+                    "english"
+                );
+
+                document.documentElement.lang =
+                    "en";
+
+                document.documentElement.dir =
+                    "ltr";
+
+                enButton.classList.add(
+                    "active"
+                );
+
+                faButton.classList.remove(
+                    "active"
+                );
+
+            } else {
+
+                body.classList.remove(
+                    "english"
+                );
+
+                document.documentElement.lang =
+                    "fa";
+
+                document.documentElement.dir =
+                    "rtl";
+
+                faButton.classList.add(
+                    "active"
+                );
+
+                enButton.classList.remove(
+                    "active"
+                );
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+```
