@@ -8,6 +8,10 @@
 
     <title>MOTIF Café & Restaurant</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
     <style>
 
         :root {
@@ -28,29 +32,20 @@
             scroll-behavior: smooth;
         }
 
-        body {
-            margin: 0;
-            padding: 0;
+       body {
+    margin: 0;
+    padding: 0;
+    background:
+        radial-gradient(circle at top left,
+            rgba(155,107,61,.08),
+            transparent 35%),
+        var(--bg-color);
 
-            background:
-                radial-gradient(
-                    circle at top left,
-                    rgba(155, 107, 61, 0.08),
-                    transparent 35%
-                ),
-                var(--bg-color);
-
-            color: var(--text-color);
-
-            font-family:
-                Tahoma,
-                Arial,
-                sans-serif;
-
-            line-height: 1.7;
-
-            transition: 0.2s ease;
-        }
+    color: var(--text-color);
+    font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
+    line-height: 1.8;
+    transition: .2s ease;
+}
 
 
         /* ================= HEADER ================= */
@@ -61,57 +56,35 @@
         }
 
 
-        .logo {
-            width: 130px;
-            height: 130px;
-
-            object-fit: contain;
-
-            margin-bottom: 12px;
-
-            filter:
-                drop-shadow(
-                    0 4px 8px rgba(0, 0, 0, 0.08)
-                );
-        }
+       .logo {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 14px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
-        h1 {
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 2.3rem;
-
-            letter-spacing: 6px;
-
-            margin: 0;
-
-            font-weight: 600;
-
-            color: var(--text-color);
-
-            direction: ltr;
-        }
+      h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    margin: 0;
+    font-weight: 600;
+    direction: ltr;
+}
 
 
         .subtitle {
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 0.8rem;
-
-            color: var(--accent-color);
-
-            margin-top: 4px;
-
-            letter-spacing: 3px;
-
-            direction: ltr;
-        }
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin-top: 5px;
+    letter-spacing: 3px;
+    direction: ltr;
+}
 
 
         header::after {
@@ -372,6 +345,8 @@
                 0;
         }
 
+       
+
 
         .item-info h3 {
 
@@ -400,48 +375,29 @@
             color:
                 var(--muted-color);
         }
-
+ .item-en {
+    font-family: "Playfair Display", Georgia, serif;
+    direction: ltr;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-top: 2px;
+}  
 
         /* ================= PRICE ================= */
 
         .item-price {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-weight:
-                bold;
-
-            font-size:
-                0.95rem;
-
-            color:
-                var(--accent-dark);
-
-            white-space:
-                nowrap;
-
-            margin-right:
-                15px;
-
-            background:
-                #f2e7d8;
-
-            padding:
-                6px 10px;
-
-            border-radius:
-                8px;
-
-            direction:
-                ltr;
-
-            unicode-bidi:
-                embed;
-        }
-
+    font-family: Arial, Helvetica, sans-serif;
+    direction: ltr;
+    unicode-bidi: embed;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--accent-dark);
+    white-space: nowrap;
+    margin-right: 15px;
+    background: #f2e7d8;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
 
         /* ================= ENGLISH MODE ================= */
 
@@ -732,10 +688,10 @@
 
                 <div
                     class="item-price"
-                    data-fa="۴۵,۰۰۰"
+                    data-fa="45,000"
                     data-en="45,000"
                 >
-                    ۴۵,۰۰۰
+                    45,000
                 </div>
 
             </div>
@@ -767,10 +723,10 @@
 
                 <div
                     class="item-price"
-                    data-fa="۶۵,۰۰۰"
+                    data-fa="65,000"
                     data-en="65,000"
                 >
-                    ۶۵,۰۰۰
+                    65,000
                 </div>
 
             </div>
@@ -802,10 +758,10 @@
 
                 <div
                     class="item-price"
-                    data-fa="۷۰,۰۰۰"
+                    data-fa="70,000"
                     data-en="70,000"
                 >
-                    ۷۰,۰۰۰
+                    70,000
                 </div>
 
             </div>
@@ -865,10 +821,10 @@
 
                 <div
                     class="item-price"
-                    data-fa="۸۵,۰۰۰"
+                    data-fa="85,000"
                     data-en="85,000"
                 >
-                    ۸۵,۰۰۰
+                    85,000
                 </div>
 
             </div>
@@ -900,10 +856,10 @@
 
                 <div
                     class="item-price"
-                    data-fa="۹۵,۰۰۰"
+                    data-fa="95,000"
                     data-en="95,000"
                 >
-                    ۹۵,۰۰۰
+                    95,000
                 </div>
 
             </div>
