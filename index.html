@@ -1001,49 +1001,30 @@
 
       showPage(page);
 
-
       if (!headerName) {
         return;
       }
 
-
       setTimeout(function() {
+        const pageElement = document.getElementById(page);
+        if (!pageElement) return;
 
-        const pageElement =
-          document.getElementById(page);
-
-
-        if (!pageElement) {
-          return;
-        }
-
-
-        const cards =
-          pageElement.querySelectorAll(".card");
-
-
-        cards.forEach(function(card) {
-
-          const title =
-            card.querySelector(".card-title");
-
-
-          if (!title) {
-            return;
-          }
-
-
-          const titleText =
-            title.textContent.trim();
-
-
-          if (titleText === headerName || title.dataset.fa === headerName || title.dataset.en === headerName) {
-            expandCard(card);
-          }
-
+        const wanted = String(headerName).replace(/\s+/g, " ").trim();
+        const card = Array.from(pageElement.querySelectorAll(".card")).find(function(item) {
+          const title = item.querySelector(".card-title");
+          if (!title) return false;
+          return [title.textContent, title.dataset.fa, title.dataset.en]
+            .filter(Boolean)
+            .some(function(value) {
+              return String(value).replace(/\s+/g, " ").trim() === wanted;
+            });
         });
 
-      }, 0);
+        if (card) {
+          expandCard(card);
+          card.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 50);
 
     }
 
